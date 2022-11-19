@@ -1,0 +1,31 @@
+@use 'global';
+
+.home-parent{
+    // border:1px solid red ;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+
+.home-parent{
+    div{
+        // border: 1px solid lightblue;
+        width: 50%;
+    }
+    
+}
+
+.home-title{
+    color: global.$bg-btn-primary;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 5%;
+    margin-bottom: 2%;
+
+}
+
+.signup-section{
+    border-right: 1px solid #626262;
+    padding-bottom: 5%;
+}

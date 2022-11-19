@@ -1,0 +1,58 @@
+.miniProfile-wrapper{
+    width: 100%;
+    height: 110%;
+    min-width: 90%;
+    // flex: auto;
+    background-image: linear-gradient(180deg, #338AA6 , #1d1d1d 70%);
+    padding: 2.5%;
+    // padding-right: 3%;
+    // margin-top: 0;
+    // padding-top: 1%;
+    // border: 1px solid red;
+    border-radius: 7px;
+    position: absolute;
+    top: 0px;
+    left: -105%;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
+
+.miniProfile-main{
+    // border: 1px solid red;
+    padding-top: 0;
+    // flex: auto;
+    
+    margin-top:0 ;
+    background-image: linear-gradient(180deg, #266980 , #1d1d1d 50%);
+    color: white;
+    border-radius: 5px;
+    // padding-left: 4%;
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 18px;
+    text-align: center;
+
+    .miniProfile-about{
+        margin-top: 0;
+        // padding-top: 0;
+        font-size: 14px;
+        width: 80%;
+    }
+}
+
+.miniProfile-image{
+    margin-top: 7%;
+    background-image: url('../images/man.jpeg');
+    width:30%;
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+    
+}
+

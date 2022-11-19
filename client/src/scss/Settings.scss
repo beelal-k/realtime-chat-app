@@ -1,0 +1,143 @@
+@use 'global';
+
+.profile-parent {
+    // border:1px solid red ;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.profile-main {
+
+    border: 2px solid #727272;
+    border-radius: 7px;
+    width: 35%;
+    display: flex;
+
+}
+
+
+.profile-aside {
+    // border-right: 2px solid #727272;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 20%;
+    // border: 1px solid red;
+    background-image: linear-gradient(180deg,#3E2F1E,30%, global.$bg-primary);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.profile-settings-image{
+    margin-top: 30%;
+    border-radius: 100%;
+    background-image: url('../images/man.jpeg');
+    // border: 1px solid red;
+    background-position: center;
+    background-size: cover;
+    width:60%;
+    height:60px;
+}
+
+.profile-info {
+    // border: 1px solid blue;
+    width: 80%;
+    padding: 5%;
+    // padding-top: 10%;
+    padding-bottom: 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+%profile-flex-col {
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-name {
+    // border: 1px solid red;
+    @extend %profile-flex-col;
+    // justify-content: space-between;
+    color: global.$bg-btn-primary;
+    font-size: 20px;
+    // align-items: center;
+
+}
+
+@mixin profile-edit-button($width: 25%) {
+    width: $width;
+    padding: 2.5%;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    color: global.$bg-btn-color-secondary;
+    background-color: global.$bg-btn-secondary;
+    cursor: pointer;
+}
+
+.profile-edit-button {
+    @include profile-edit-button();
+}
+
+.profile-about {
+    @extend %profile-flex-col;
+    color: global.$bg-btn-primary;
+}
+
+
+
+.profile-inputs {
+    border-radius: 5px;
+    width: 95%;
+    margin-bottom: 2%;
+    font-size: 17px;
+}
+
+
+.profile-label {
+    color: global.$bg-btn-color-secondary;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2%;
+}
+
+.profile-edit-password-btn {
+    @include profile-edit-button($width: 30%);
+    float: right;
+
+}
+
+@mixin profile-remove-button($color: global.$bg-btn-primary, $border-color : #727272, $width: 30%, $padding: 3%) {
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    background-color: transparent;
+    width: $width;
+    padding: $padding;
+    color: $color;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 2%;
+
+}
+
+.profile-logout{
+    margin-top: 5%;
+    gap: 3%;
+}
+
+.profile-logout-btn {
+    @include profile-remove-button();
+
+}
+
+.profile-delete-btn {
+    @include profile-remove-button($color: #D12424, $border-color: #D12424, $width:35%);
+    
+}

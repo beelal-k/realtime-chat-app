@@ -1,0 +1,44 @@
+$bg-primary: #232323;
+$bg-inputs: #353535;
+$bg-btn-primary: #E7E7E7;
+$bg-btn-secondary: #353535;
+$bg-btn-color-secondary: #D4D4D4;
+
+
+html,
+body {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: $bg-primary;
+    // height: 200vh;
+}
+
+input{
+    outline: none;
+    color: $bg-btn-color-secondary;
+    caret-color:$bg-btn-color-secondary ;
+}
+
+.inputs {
+    background-color: $bg-inputs ;
+    border: 0;
+    padding: 2.5%;
+}
+
+.primary-buttons{
+    background-color: $bg-btn-primary;
+    color: $bg-primary;
+    
+}
+
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
