@@ -1,9 +1,13 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import '../scss/Profile.scss'
 
-const Profile = ({profileOpen}) => {
+const Profile = () => {
 
-    if(profileOpen)
+    const miniProfileSlice = useSelector((state) => state.miniProfile)
+    
+
+    if(miniProfileSlice.open)
     return (
         <>
             <main className='miniProfile-wrapper'>
