@@ -2,10 +2,12 @@ import React from 'react'
 import '../scss/Friend_bar.scss'
 import friendsIcon from '../images/friendsIcon.svg';
 import newConvoIcon from '../images/newConvo.svg';
+import { useSelector } from 'react-redux'
 
 const Friend_bar = () => {
-  
-  
+
+  const userSlice = useSelector((state) => state.user);
+
   return (
     <>
       <section className='main-chat-friend-bar flex-col'>
@@ -16,7 +18,7 @@ const Friend_bar = () => {
           <button title="Start a new chat"><img src={newConvoIcon} /></button>
         </div>
         <div className='friends-bar-friends-list flex-col'>
-          
+
           <div className='flex-row friends-bar-friend-template'>
             <div className='friends-bar-friend-image'></div>
             <p>Tina Lopez</p>
@@ -30,35 +32,35 @@ const Friend_bar = () => {
             <div className='friends-bar-friend-image'></div>
             <p>Tina Lopez</p>
           </div>
-           <div className='flex-row friends-bar-friend-template'>
+          <div className='flex-row friends-bar-friend-template'>
             <div className='friends-bar-friend-image'></div>
             <p>Tina Lopez</p>
           </div>
-           <div className='flex-row friends-bar-friend-template'>
+          <div className='flex-row friends-bar-friend-template'>
             <div className='friends-bar-friend-image'></div>
             <p>Tina Lopez</p>
           </div>
-           <div className='flex-row friends-bar-friend-template'>
+          <div className='flex-row friends-bar-friend-template'>
             <div className='friends-bar-friend-image'></div>
             <p>Tina Lopez</p>
           </div>
-           <div className='flex-row friends-bar-friend-template'>
+          <div className='flex-row friends-bar-friend-template'>
             <div className='friends-bar-friend-image'></div>
             <p>Tina Lopez</p>
           </div>
-           <div className='flex-row friends-bar-friend-template'>
+          <div className='flex-row friends-bar-friend-template'>
             <div className='friends-bar-friend-image'></div>
             <p>Tina Lopez</p>
           </div>
-           <div className='flex-row friends-bar-friend-template'>
+          <div className='flex-row friends-bar-friend-template'>
             <div className='friends-bar-friend-image'></div>
             <p>Tina Lopez</p>
           </div>
-           <div className='flex-row friends-bar-friend-template'>
+          <div className='flex-row friends-bar-friend-template'>
             <div className='friends-bar-friend-image'></div>
             <p>Tina Lopez</p>
           </div>
-           <div className='flex-row friends-bar-friend-template'>
+          <div className='flex-row friends-bar-friend-template'>
             <div className='friends-bar-friend-image'></div>
             <p>Tina Lopez</p>
           </div>
@@ -68,7 +70,7 @@ const Friend_bar = () => {
             <div className='profile-image'></div>
           </div>
           <div className='friends-bar-bottom-profile flex-col'>
-            <p>Tina Lopez</p>
+            <p>{userSlice.username}</p>
             <button>Settings</button>
             <button>Logout</button>
           </div>

@@ -62,7 +62,7 @@ app.get('/login-user', (req, res) => {
             console.log(err.message);
             res.send(err)
         }
-        if (results.length > 0) {
+        if (results) {
             console.log(`Logged in as ${user.email}!`);
             // console.log('rows: ',rows)
             // console.log('fields: ',fields)

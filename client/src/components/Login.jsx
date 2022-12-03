@@ -16,9 +16,13 @@ const Login = () => {
             }
         })
             .then(response => {
-                console.log(response.data)
+                if (response.data.length > 0) {
+                    navigate('/main-chat');
+                    dispatch(updateUsername(response.data[0].user_name));
+                    dispatch(updateEmail(response.data[0].user_email));
+                }
+                console.log('response: ', response.data);
             })
-        navigate('/main-chat');
 
 
     }
